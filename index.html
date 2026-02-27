@@ -123,15 +123,38 @@ h2::after {
   opacity: 1;
 }
 
+.card-icon {
+  font-size: 26px;
+  margin-bottom: 14px;
+  color: #c9a227;
+}
+
 .card h3 {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background: #c9a227;
 }
 
 .card p {
   font-size: 17px;
   line-height: 1.75;
   color: #cfcfcf;
+}
+
+.highlight {
+  color: #c9a227;
+  font-weight: 600;
 }
 
 .about-wrapper {
@@ -277,20 +300,24 @@ footer {
   <h2>Dlaczego NaxaBe?</h2>
   <div class="projects">
     <div class="card">
+    <div class="card-icon">🎯</div>
       <h3>Strategia biznesowa</h3>
-      <p>Projektowanie stron internetowych w oparciu o analizę biznesową, cele sprzedażowe oraz realną konwersję. Każda realizacja ma przynosić efekt – nie tylko wyglądać dobrze.</p>
+      <p>Projektowanie <span class="highlight">stron internetowych</span> w oparciu o analizę biznesową, cele sprzedażowe oraz realną <span class="highlight">konwersję</span>. Każda realizacja ma przynosić efekt – nie tylko wyglądać dobrze.</p>
     </div>
     <div class="card">
+    <div class="card-icon">⚡</div>
       <h3>Technologia + AI</h3>
-      <p>Nowoczesne tworzenie stron internetowych z wykorzystaniem AI, SEO i automatyzacji marketingu. Łączę technologię z praktyką biznesową.</p>
+      <p>Nowoczesne tworzenie <span class="highlight">stron internetowych</span> z wykorzystaniem <span class="highlight">AI</span>, <span class="highlight">SEO</span> i automatyzacji marketingu. Łączę technologię z praktyką biznesową.</p>
     </div>
     <div class="card">
+    <div class="card-icon">✨</div>
       <h3>Premium design</h3>
-      <p>Minimalistyczny, elegancki design dopasowany do branży. Strony internetowe budujące profesjonalny wizerunek firmy online.</p>
+      <p>Minimalistyczny, elegancki design dopasowany do branży. Strony internetowe budujące profesjonalny <span class="highlight">wizerunek firmy online</span>.</p>
     </div>
     <div class="card">
+    <div class="card-icon">🚀</div>
       <h3>Skalowalność</h3>
-      <p>Strony przygotowane pod rozwój firmy, kampanie reklamowe, SEO oraz dalszą rozbudowę funkcjonalności.</p>
+      <p>Strony przygotowane pod rozwój firmy, kampanie reklamowe, <span class="highlight">SEO</span> oraz dalszą rozbudowę funkcjonalności.</p>
     </div>
   </div>
 </section>
@@ -299,20 +326,24 @@ footer {
   <h2>Usługi</h2>
   <div class="projects">
     <div class="card">
+    <div class="card-icon">🌐</div>
       <h3>Strony internetowe</h3>
-      <p>Tworzenie nowoczesnych stron internetowych i landing page dla firm, marek osobistych oraz biznesów lokalnych.</p>
+      <p>Tworzenie nowoczesnych <span class="highlight">stron internetowych</span> i <span class="highlight">landing page</span> dla firm, marek osobistych oraz biznesów lokalnych.</p>
     </div>
     <div class="card">
+    <div class="card-icon">🧩</div>
       <h3>WordPress</h3>
-      <p>Projektowanie i optymalizacja stron WordPress – szybkie, bezpieczne i przygotowane pod SEO.</p>
+      <p>Projektowanie i optymalizacja stron <span class="highlight">WordPress</span> – szybkie, bezpieczne i przygotowane pod <span class="highlight">SEO</span>.</p>
     </div>
     <div class="card">
+    <div class="card-icon">🔎</div>
       <h3>SEO & Optymalizacja</h3>
-      <p>Optymalizacja techniczna stron internetowych pod wyszukiwarki, poprawa widoczności i struktury treści.</p>
+      <p>Optymalizacja techniczna <span class="highlight">stron internetowych</span> pod wyszukiwarki, poprawa widoczności i struktury treści.</p>
     </div>
     <div class="card">
+    <div class="card-icon">🤖</div>
       <h3>AI & Automatyzacja</h3>
-      <p>Wykorzystanie AI w tworzeniu treści, analizie danych i automatyzacji procesów marketingowych.</p>
+      <p>Wykorzystanie <span class="highlight">AI</span> w tworzeniu treści, analizie danych i automatyzacji procesów marketingowych.</p>
     </div>
   </div>
 </section>
