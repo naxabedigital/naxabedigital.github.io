@@ -1,163 +1,198 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>NaxaBe Digital – Web & AI Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top left, #111 0%, #0a0a0a 40%, #000 100%);
-      color: white;
-    }
+<meta charset="UTF-8">
+<title>NaxaBe Digital – Web & AI Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #0d0d0d, #000);
+  color: #eaeaea;
+}
 
-    h1, h2 {
-      margin-bottom: 20px;
-    }
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(135deg, #111, #1c1c1c);
-    }
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 40px;
-      background: linear-gradient(135deg, #ffffff, #cfcfcf);
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
+h2 {
+  font-size: 32px;
+  position: relative;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #c9a227;
+  display: block;
+  margin-top: 10px;
+}
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.hero {
+  text-align: center;
+  padding: 160px 20px;
+  background: radial-gradient(circle at center, #1a1a1a, #000);
+}
 
-    .card {
-      background: #1c1c1c;
-      padding: 30px;
-      border-radius: 8px;
-    }
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      background: #111;
-      font-size: 14px;
-    }
-  </style>
+.hero p {
+  font-size: 20px;
+  color: #bdbdbd;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 45px;
+  background: #c9a227;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e0b93b;
+  transform: translateY(-3px);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #151515;
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #c9a227;
+  transform: translateY(-5px);
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #c9a227;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #0a0a0a;
+  font-size: 14px;
+  color: #777;
+}
+
+@media(max-width: 900px){
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <section class="hero">
   <h1>NaxaBe Digital</h1>
-  <p>Nowoczesne strony internetowe dla małych i średnich firm</p>
-  <a href="#kontakt" class="btn">Skontaktuj się</a>
+  <p>Corporate Web & AI Studio dla firm, które chcą rosnąć online</p>
+  <a href="#kontakt" class="btn">Rozpocznij współpracę</a>
 </section>
 
 <section>
   <h2>O mnie</h2>
-  <p>Tworzę nowoczesne strony internetowe i landing page dla małych oraz średnich firm. Łączę web development z AI, SEO i automatyzacją, aby budować wydajne, zoptymalizowane i skuteczne rozwiązania online.</p>
+  <div class="about-wrapper">
+    <div>
+      <p>
+        Projektuję nowoczesne strony internetowe i landing page dla małych oraz średnich firm.
+        Łączę web development z AI, SEO i automatyzacją, aby budować skalowalne i wydajne rozwiązania online.
+      </p>
+      <p>
+        Przykładem wykorzystania AI jest m.in. generowanie zaawansowanych modeli wizualnych,
+        postaci do gier czy koncepcji projektowych — łączę kreatywność z technologią.
+      </p>
+    </div>
+    <div>
+      <!-- Wstaw tutaj nazwę pliku swojego zdjęcia -->
+      <img src="about-ai.jpeg" alt="Founder NaxaBe Digital">
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>Dlaczego NaxaBe?</h2>
   <div class="projects">
-
     <div class="card">
-      <h3>Strategiczne podejście</h3>
-      <p>Nie tworzę tylko estetycznych stron. Każdy projekt buduję z myślą o konwersji, widoczności i realnym efekcie biznesowym.</p>
+      <h3>Strategia biznesowa</h3>
+      <p>Każda strona projektowana jest z myślą o konwersji i realnym efekcie biznesowym.</p>
     </div>
-
     <div class="card">
       <h3>Technologia + AI</h3>
-      <p>Łączę web development z narzędziami AI, SEO i automatyzacją, aby tworzyć nowoczesne i skalowalne rozwiązania.</p>
+      <p>Nowoczesne podejście łączące web development, SEO oraz automatyzację procesów.</p>
     </div>
-
     <div class="card">
-      <h3>Indywidualne podejście</h3>
-      <p>Każda firma ma inne potrzeby. Dopasowuję strukturę strony, treści i funkcjonalności do konkretnej branży.</p>
+      <h3>Premium design</h3>
+      <p>Elegancka, minimalistyczna estetyka budująca profesjonalny wizerunek online.</p>
     </div>
-
     <div class="card">
-      <h3>Nowoczesny design</h3>
-      <p>Minimalistyczna, czytelna estetyka z naciskiem na UX i profesjonalny wizerunek online.</p>
+      <h3>Skalowalność</h3>
+      <p>Strony przygotowane pod rozwój, marketing i kampanie reklamowe.</p>
     </div>
-
   </div>
 </section>
 
 <section>
   <h2>Usługi</h2>
   <div class="projects">
-    
     <div class="card">
       <h3>Strony internetowe</h3>
-      <p>Nowoczesne strony wizytówki oraz landing page dostosowane do potrzeb małych i średnich firm.</p>
+      <p>Strony wizytówki, landing page, projekty dopasowane do branży.</p>
     </div>
-
     <div class="card">
       <h3>WordPress</h3>
-      <p>Projektowanie i konfiguracja stron WordPress z naciskiem na wydajność i łatwą edycję treści.</p>
+      <p>Konfiguracja i optymalizacja stron WordPress.</p>
     </div>
-
     <div class="card">
       <h3>SEO & Optymalizacja</h3>
-      <p>Podstawowa optymalizacja techniczna, struktura treści oraz przygotowanie strony pod pozycjonowanie.</p>
+      <p>Przygotowanie techniczne pod pozycjonowanie.</p>
     </div>
-
     <div class="card">
       <h3>AI & Automatyzacja</h3>
-      <p>Wykorzystanie narzędzi AI do usprawnienia treści, UX oraz procesów marketingowych.</p>
-    </div>
-
-    <div class="card">
-      <h3>Content & Reklama</h3>
-      <p>Tworzenie struktury treści, przygotowanie pod kampanie reklamowe i rozwój widoczności online.</p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Projekty</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Projekt #1</h3>
-      <p>Strona w budowie</p>
-    </div>
-    <div class="card">
-      <h3>Projekt #2</h3>
-      <p>Strona w budowie</p>
-    </div>
-    <div class="card">
-      <h3>Projekt #3</h3>
-      <p>Strona w budowie</p>
+      <p>Usprawnianie treści i procesów marketingowych.</p>
     </div>
   </div>
 </section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>Email: naxabedigital@gmail.com</p>
+  <p>Email: naxabe.digital@gmail.com</p>
 </section>
 
 <footer>
