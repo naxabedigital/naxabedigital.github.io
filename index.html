@@ -94,8 +94,22 @@ h2::after {
 .card {
   background: linear-gradient(145deg, #141414, #101010);
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid #1f1f1f;
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #c9a227;
+  opacity: 0;
   transition: 0.35s ease;
 }
 
@@ -105,6 +119,10 @@ h2::after {
   box-shadow: 0 10px 35px rgba(201,162,39,0.08);
 }
 
+.card:hover::before {
+  opacity: 1;
+}
+
 .card h3 {
   font-size: 20px;
   margin-bottom: 15px;
@@ -112,7 +130,7 @@ h2::after {
 
 .card p {
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: #cfcfcf;
 }
 
@@ -260,19 +278,19 @@ footer {
   <div class="projects">
     <div class="card">
       <h3>Strategia biznesowa</h3>
-      <p>Każda strona projektowana jest z myślą o konwersji i realnym efekcie biznesowym.</p>
+      <p>Projektowanie stron internetowych w oparciu o analizę biznesową, cele sprzedażowe oraz realną konwersję. Każda realizacja ma przynosić efekt – nie tylko wyglądać dobrze.</p>
     </div>
     <div class="card">
       <h3>Technologia + AI</h3>
-      <p>Nowoczesne podejście łączące web development, SEO oraz automatyzację procesów.</p>
+      <p>Nowoczesne tworzenie stron internetowych z wykorzystaniem AI, SEO i automatyzacji marketingu. Łączę technologię z praktyką biznesową.</p>
     </div>
     <div class="card">
       <h3>Premium design</h3>
-      <p>Elegancka, minimalistyczna estetyka budująca profesjonalny wizerunek online.</p>
+      <p>Minimalistyczny, elegancki design dopasowany do branży. Strony internetowe budujące profesjonalny wizerunek firmy online.</p>
     </div>
     <div class="card">
       <h3>Skalowalność</h3>
-      <p>Strony przygotowane pod rozwój, marketing i kampanie reklamowe.</p>
+      <p>Strony przygotowane pod rozwój firmy, kampanie reklamowe, SEO oraz dalszą rozbudowę funkcjonalności.</p>
     </div>
   </div>
 </section>
@@ -282,19 +300,19 @@ footer {
   <div class="projects">
     <div class="card">
       <h3>Strony internetowe</h3>
-      <p>Strony wizytówki, landing page, projekty dopasowane do branży.</p>
+      <p>Tworzenie nowoczesnych stron internetowych i landing page dla firm, marek osobistych oraz biznesów lokalnych.</p>
     </div>
     <div class="card">
       <h3>WordPress</h3>
-      <p>Konfiguracja i optymalizacja stron WordPress.</p>
+      <p>Projektowanie i optymalizacja stron WordPress – szybkie, bezpieczne i przygotowane pod SEO.</p>
     </div>
     <div class="card">
       <h3>SEO & Optymalizacja</h3>
-      <p>Przygotowanie techniczne pod pozycjonowanie.</p>
+      <p>Optymalizacja techniczna stron internetowych pod wyszukiwarki, poprawa widoczności i struktury treści.</p>
     </div>
     <div class="card">
       <h3>AI & Automatyzacja</h3>
-      <p>Usprawnianie treści i procesów marketingowych.</p>
+      <p>Wykorzystanie AI w tworzeniu treści, analizie danych i automatyzacji procesów marketingowych.</p>
     </div>
   </div>
 </section>
