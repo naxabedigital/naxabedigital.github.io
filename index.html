@@ -157,6 +157,52 @@ h2::after {
   font-weight: 600;
 }
 
+.contact-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.copy-btn {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #c9a227;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #c9a227;
+  color: black;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+  font-size: 22px;
+}
+
+.social-links a {
+  color: #c9a227;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
 .about-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -372,12 +418,34 @@ footer {
   
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>Email: naxabe.digital@gmail.com</p>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-row">
+      📩 <span id="email-text">naxabe.digital@gmail.com</span>
+      <button class="copy-btn" onclick="copyEmail()">Kopiuj</button>
+    </div>
+
+    <div class="social-links">
+      <a href="#" target="_blank" title="LinkedIn">🔗</a>
+      <a href="#" target="_blank" title="GitHub">💻</a>
+      <a href="#" title="Oferteo (wkrótce)">🧾</a>
+    </div>
+
+  </div>
 </section>
 
 <footer>
   © 2026 NaxaBe Digital
 </footer>
 
+  <script>
+function copyEmail() {
+  const email = document.getElementById("email-text").innerText;
+  navigator.clipboard.writeText(email);
+  alert("Email skopiowany!");
+}
+</script>
+  
 </body>
 </html>
