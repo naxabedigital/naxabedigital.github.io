@@ -40,18 +40,27 @@ h2::after {
 
 .hero {
   text-align: center;
-  padding: 160px 20px;
-  background: radial-gradient(circle at center, #1a1a1a, #000);
+  padding: 180px 20px;
+  background: radial-gradient(circle at center, rgba(201,162,39,0.08), #000 60%);
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 52px;
   letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 25px rgba(201,162,39,0.15);
 }
 
 .hero p {
   font-size: 20px;
   color: #bdbdbd;
+}
+
+  .hero-divider {
+  width: 80px;
+  height: 3px;
+  background: #c9a227;
+  margin: 25px auto 0 auto;
 }
 
 .btn {
@@ -66,6 +75,14 @@ h2::after {
   transition: 0.3s;
 }
 
+  .hero-tagline {
+  margin-top: 25px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+}
+  
 .btn:hover {
   background: #e0b93b;
   transform: translateY(-3px);
@@ -150,7 +167,14 @@ footer {
 <section class="hero">
   <h1>NaxaBe Digital</h1>
   <p>Corporate Web & AI Studio dla firm, które chcą rosnąć online</p>
+
+  <div class="hero-divider"></div>
+
   <a href="#kontakt" class="btn">Rozpocznij współpracę</a>
+
+  <div class="hero-tagline">
+    Strategia. Technologia. Wzrost.
+  </div>
 </section>
 
 <section>
@@ -159,8 +183,8 @@ footer {
 
     <div>
       <p>
-        Projektuję nowoczesne strony internetowe i landing page dla małych oraz średnich firm,
-        które chcą budować silną obecność online i realnie zwiększać sprzedaż.
+        Projektuję nowoczesne strony internetowe i landing page dla małych oraz średnich firm,  
+        a także dla marek osobistych i klientów indywidualnych, którzy chcą budować silną obecność online i realnie zwiększać sprzedaż.
       </p>
 
       <p>
