@@ -244,68 +244,68 @@ footer {
 .pricing {
     padding: 120px 20px;
     background: #0f0f0f;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.price-card {
-    background: linear-gradient(145deg, #1a1a1a, #111);
-    padding: 50px 30px;
-    border-radius: 20px;
     text-align: center;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 80px auto 0;
+}
+
+.price-box {
+    flex: 1;
+    padding: 40px 30px;
+    background: #151515;
+    border-radius: 20px;
     position: relative;
     transition: 0.4s ease;
-    border: 1px solid #222;
 }
 
-.price-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-.price-header h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.price-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 .price {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
     color: #c9a227;
-    margin-bottom: 25px;
+    margin: 20px 0;
 }
 
-.price-card ul {
+.price-box ul {
     list-style: none;
-    margin-bottom: 35px;
-    text-align: left;
+    padding: 0;
+    margin: 30px 0;
 }
 
-.price-card ul li {
-    margin: 12px 0;
+.price-box ul li {
+    margin: 10px 0;
     color: #ddd;
-    font-size: 15px;
 }
 
 .price-btn {
     display: inline-block;
-    padding: 14px 30px;
+    padding: 12px 28px;
     background: #c9a227;
     color: #000;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
     border-radius: 8px;
     transition: 0.3s;
 }
 
 .price-btn:hover {
     background: #fff;
+}
+
+.divider {
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #c9a227, transparent);
 }
 
 .featured {
