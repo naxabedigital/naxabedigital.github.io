@@ -467,6 +467,20 @@ footer {
     color: #fff;
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
 .nav-links a {
     position: relative;
     text-decoration: none;
