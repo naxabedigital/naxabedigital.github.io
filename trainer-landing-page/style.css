@@ -131,3 +131,39 @@ footer {
     color: #777777;
     font-size: 14px;
 }
+
+
+/* TRANSFORMATIONS */
+.transformations {
+    background: #161616;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 20px;
+    font-weight: bold;
+    color: #c9a227;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
