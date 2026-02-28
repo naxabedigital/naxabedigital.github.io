@@ -167,3 +167,31 @@ footer {
 .card:hover {
     transform: translateY(-10px);
 }
+
+
+/* FOOTER UPGRADE */
+.site-footer {
+    background: #000;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #1f1f1f;
+}
+
+.footer-content p {
+    margin: 8px 0;
+}
+
+.credit {
+    font-size: 14px;
+    color: #888;
+}
+
+.credit a {
+    color: #c9a227;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
