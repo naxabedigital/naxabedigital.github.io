@@ -16,7 +16,23 @@
 
 <body>
 
-<header class="hero">
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">FitPower</div>
+
+        <ul class="nav-links">
+            <li><a href="#start">Start</a></li>
+            <li><a href="#o-mnie">O mnie</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#metamorfozy">Metamorfozy</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#cennik">Cennik</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header id="start" class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>Trener Personalny Warszawa</h1>
@@ -26,12 +42,12 @@
     </div>
 </header>
 
-<section class="about">
+<section id="o-mnie" class="about">
     <h2>Dlaczego warto ze mną trenować?</h2>
     <p>Pomagam kobietom i mężczyznom osiągnąć realne efekty bez głodówek i przypadkowych planów z internetu.</p>
 </section>
 
-<section class="offer">
+<section id="oferta" class="offer">
     <div class="offer-wrapper">
 
         <div class="offer-left">
@@ -69,7 +85,7 @@
     </div>
 </section>
 
-<section class="transformations">
+<section id="metamorfozy" class="transformations">
     <h2>Metamorfozy Klientów</h2>
     <div class="grid">
         <div class="card">
@@ -87,7 +103,7 @@
     </div>
 </section>
 
-<section class="testimonials">
+<section id="opinie" class="testimonials">
     <h2>Opinie Klientów</h2>
 
     <div class="testimonials-grid">
@@ -111,7 +127,7 @@
     </div>
 </section>
 
-<section class="pricing">
+<section id="cennik" class="pricing">
     <h2>Cennik</h2>
 
     <div class="pricing-row">
@@ -206,5 +222,12 @@
     </div>
 </footer>
 
+    <script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+    
 </body>
 </html>
