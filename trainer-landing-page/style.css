@@ -101,16 +101,49 @@ h2::after {
 }
 
 /* OFFER */
-.offer ul {
-    list-style: none;
-    padding: 0;
+.offer {
+    padding: 120px 20px;
+    background: #0c0c0c;
     text-align: center;
 }
 
-.offer li {
-    margin: 15px 0;
+.offer-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offer-card {
+    background: #151515;
+    padding: 40px 25px;
+    border-radius: 18px;
+    transition: 0.4s ease;
+    border: 1px solid #1f1f1f;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    border-color: #c9a227;
+    box-shadow: 0 15px 35px rgba(201,162,39,0.15);
+}
+
+.offer-card .icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.offer-card h3 {
+    margin-bottom: 15px;
     font-size: 20px;
-    color: #dddddd;
+}
+
+.offer-card p {
+    font-size: 14px;
+    color: #bbb;
 }
 
 /* CONTACT */
