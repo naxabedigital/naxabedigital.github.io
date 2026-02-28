@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #111, #000);
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #c9a227;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.offer ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.offer li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    color: #777;
+}
