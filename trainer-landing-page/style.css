@@ -412,25 +412,23 @@ footer {
     transform: translateY(-3px);
 }
 
-/* SOCIAL MEDIA */
+/* SOCIAL MEDIA PREMIUM */
 .social-icons {
-    margin-top: 35px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .social-icons a {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #333;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #2a2a2a;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: #aaa;
-    font-weight: bold;
     transition: all 0.3s ease;
 }
 
