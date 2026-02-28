@@ -59,14 +59,15 @@ body {
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 18px;
-    transition: all 0.3s ease;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(201,162,39,0.15);
 }
 
 .btn:hover {
-    background: #ffffff;
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(201,162,39,0.35);
 }
 
 /* SECTIONS */
@@ -284,11 +285,13 @@ footer {
     font-weight: bold;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: all 0.35s ease;
+    box-shadow: 0 6px 18px rgba(201,162,39,0.15);
 }
 
 .price-btn:hover {
-    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(201,162,39,0.3);
 }
 
 .divider {
@@ -405,12 +408,13 @@ footer {
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    transition: 0.3s ease;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(201,162,39,0.15);
 }
 
 .contact-btn:hover {
-    background: #ffffff;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(201,162,39,0.35);
 }
 
 /* SOCIAL MEDIA PREMIUM */
@@ -463,21 +467,31 @@ footer {
     color: #fff;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
 .nav-links a {
+    position: relative;
     text-decoration: none;
     color: #aaa;
-    transition: 0.3s ease;
     font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #c9a227;
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #c9a227;
+    color: #fff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Sticky Effect */
@@ -507,4 +521,13 @@ section {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+.nav-links a.active {
+    color: #fff;
+}
+
+.nav-links a.active::after {
+    width: 100%;
 }
