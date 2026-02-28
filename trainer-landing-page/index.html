@@ -47,7 +47,7 @@
     <p>Pomagam kobietom i mężczyznom osiągnąć realne efekty bez głodówek i przypadkowych planów z internetu.</p>
 </section>
 
-<section id="oferta" class="offer">
+<section id="oferta" class="offer reveal">
     <div class="offer-wrapper">
 
         <div class="offer-left">
@@ -85,7 +85,7 @@
     </div>
 </section>
 
-<section id="metamorfozy" class="transformations">
+<section id="metamorfozy" class="transformations reveal">
     <h2>Metamorfozy Klientów</h2>
     <div class="grid">
         <div class="card">
@@ -103,7 +103,7 @@
     </div>
 </section>
 
-<section id="opinie" class="testimonials">
+<section id="opinie" class="testimonials reveal">
     <h2>Opinie Klientów</h2>
 
     <div class="testimonials-grid">
@@ -127,7 +127,7 @@
     </div>
 </section>
 
-<section id="cennik" class="pricing">
+<section id="cennik" class="pricing reveal">
     <h2>Cennik</h2>
 
     <div class="pricing-row">
@@ -175,7 +175,7 @@
     </div>
 </section>
 
-<section id="kontakt" class="contact">
+<section id="kontakt" class="contact reveal">
     <h2>Kontakt</h2>
 
     <div class="contact-wrapper">
@@ -222,12 +222,31 @@
     </div>
 </footer>
 
-    <script>
+    
+<script>
 window.addEventListener("scroll", function() {
     const navbar = document.querySelector(".navbar");
     navbar.classList.toggle("scrolled", window.scrollY > 50);
 });
 </script>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    reveals.forEach((el) => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
     
 </body>
 </html>
