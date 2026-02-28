@@ -141,10 +141,43 @@ button:hover {
 
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px 20px;
   background: #0b1625;
   font-size: 14px;
-  color: #888;
+  color: #777;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crafted a {
+  color: #c9a227;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.crafted a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #c9a227;
+  transition: 0.3s ease;
+}
+
+.crafted a:hover {
+  color: #e0b93b;
+}
+
+.crafted a:hover::after {
+  width: 100%;
 }
 
 @media(max-width: 768px) {
