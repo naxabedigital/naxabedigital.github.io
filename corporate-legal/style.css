@@ -28,7 +28,7 @@ h2::after {
 
 .hero {
   background: 
-    linear-gradient(rgba(14,26,43,0.85), rgba(14,26,43,0.9)),
+    linear-gradient(rgba(10,20,35,0.9), rgba(10,20,35,0.95)),
     url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1974&auto=format&fit=crop")
     center/cover no-repeat;
   min-height: 90vh;
@@ -44,7 +44,10 @@ h2::after {
 .hero h1 {
   font-size: 52px;
   margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
+
 
 .hero span {
   color: #c9a227;
@@ -184,4 +187,35 @@ footer {
   .hero h1 {
     font-size: 38px;
   }
+}
+
+.team {
+  background: #0f1f34;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: #162c4a;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #1e3b60;
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  border-color: #c9a227;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.team-card h3 {
+  color: #c9a227;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: capitalize;
 }
