@@ -261,3 +261,17 @@ h2::after {
   letter-spacing: 1px;
   color: #9a878a;
 }
+
+/* ===== BEAUTY LOGO ===== */
+
+.hero-logo {
+  width: 120px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.hero-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
