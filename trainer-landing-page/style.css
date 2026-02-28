@@ -411,3 +411,31 @@ footer {
     background: #ffffff;
     transform: translateY(-3px);
 }
+
+/* SOCIAL MEDIA */
+.social-icons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    border-color: #c9a227;
+    color: #c9a227;
+    transform: translateY(-4px);
+}
