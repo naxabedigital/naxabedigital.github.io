@@ -545,3 +545,84 @@ section {
 .nav-links a.active::after {
     width: 100%;
 }
+
+/* ========================= */
+/* MOBILE & TABLET FIX */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+    /* NAVBAR */
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* OFFER */
+    .offer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .offer-right {
+        grid-template-columns: 1fr;
+    }
+
+    /* PRICING */
+    .pricing-row {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .featured {
+        transform: none;
+    }
+
+    .price-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .pricing {
+        padding: 80px 20px;
+    }
+
+}
