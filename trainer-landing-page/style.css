@@ -248,31 +248,34 @@ footer {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
 .price-card {
-    background: #1e1e1e;
+    background: linear-gradient(145deg, #1a1a1a, #111);
     padding: 50px 30px;
-    border-radius: 14px;
+    border-radius: 20px;
     text-align: center;
-    transition: 0.3s ease;
     position: relative;
+    transition: 0.4s ease;
+    border: 1px solid #222;
 }
 
 .price-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-.price-card h3 {
-    margin-bottom: 20px;
+.price-header h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .price {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
     color: #c9a227;
     margin-bottom: 25px;
@@ -280,22 +283,24 @@ footer {
 
 .price-card ul {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    text-align: left;
 }
 
 .price-card ul li {
-    margin: 10px 0;
+    margin: 12px 0;
     color: #ddd;
+    font-size: 15px;
 }
 
 .price-btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 14px 30px;
     background: #c9a227;
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
@@ -303,8 +308,20 @@ footer {
     background: #fff;
 }
 
-/* FEATURED CARD */
 .featured {
     border: 2px solid #c9a227;
     transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c9a227;
+    color: #000;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
 }
