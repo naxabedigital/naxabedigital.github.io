@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e1a2b;
+  color: #f2f2f2;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #c9a227;
+  display: block;
+  margin-top: 10px;
+}
+
+.hero {
+  background: 
+    linear-gradient(rgba(14,26,43,0.85), rgba(14,26,43,0.9)),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1974&auto=format&fit=crop")
+    center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: #c9a227;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.btn {
+  background: #c9a227;
+  color: black;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e0b93b;
+  transform: translateY(-3px);
+}
+
+.services {
+  background: #12223a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #162c4a;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #1e3b60;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #c9a227;
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #c9a227;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+  font-size: 18px;
+}
+
+.contact {
+  background: #12223a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #1e3b60;
+  color: white;
+}
+
+button {
+  background: #c9a227;
+  color: black;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e0b93b;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0b1625;
+  font-size: 14px;
+  color: #888;
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+}
