@@ -1,49 +1,106 @@
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f0f0f;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HERO */
 .hero {
-    background: linear-gradient(135deg, #111, #000);
-    padding: 150px 20px;
+    position: relative;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1974&auto=format&fit=crop") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
 .hero h1 {
-    font-size: 56px;
+    font-size: 64px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #ccc;
+    font-size: 22px;
+    color: #dddddd;
+    margin-bottom: 40px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
-    padding: 15px 35px;
+    padding: 18px 45px;
     background: #c9a227;
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: all 0.3s ease;
 }
 
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
 section {
     padding: 100px 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 38px;
+    margin-bottom: 40px;
     text-align: center;
+    position: relative;
 }
 
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #c9a227;
+    display: block;
+    margin: 15px auto 0;
+}
+
+/* ABOUT */
+.about p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+/* OFFER */
 .offer ul {
     list-style: none;
     padding: 0;
@@ -52,16 +109,25 @@ h2 {
 
 .offer li {
     margin: 15px 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: #dddddd;
 }
 
+/* CONTACT */
 .contact {
     text-align: center;
 }
 
+.contact p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    background: #000;
-    color: #777;
+    padding: 40px;
+    background: #000000;
+    color: #777777;
+    font-size: 14px;
 }
