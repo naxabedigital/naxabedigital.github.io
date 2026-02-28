@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beauty Studio – Landing Page</title>
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #111;
-}
-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-h1, h2 {
-  margin-bottom: 20px;
-}
-.hero {
-  text-align: center;
-  padding: 140px 20px;
-  background: #f4f1ee;
-}
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 40px;
-  background: #111;
-  color: #fff;
-  text-decoration: none;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Studio – Landing Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -45,17 +17,29 @@ h1, h2 {
 
 <section id="oferta">
   <h2>Nasze Usługi</h2>
-  <p>Zabiegi na twarz, stylizacja brwi, makijaż permanentny oraz pielęgnacja premium.</p>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Zabiegi na twarz</h3>
+      <p>Indywidualnie dobrane terapie pielęgnacyjne przywracające skórze blask i jędrność.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Stylizacja brwi</h3>
+      <p>Henna, laminacja oraz profesjonalne modelowanie dopasowane do rysów twarzy.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Makijaż permanentny</h3>
+      <p>Subtelne podkreślenie urody w naturalnym, eleganckim stylu.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Dlaczego my?</h2>
-  <p>Indywidualne podejście, certyfikowane produkty i komfortowa atmosfera.</p>
-</section>
-
-<section>
-  <h2>Rezerwacja</h2>
-  <p>Umów wizytę online lub telefonicznie.</p>
+<section class="cta-section">
+  <h2>Umów wizytę już dziś</h2>
+  <p>Zadbaj o siebie w wyjątkowej atmosferze beauty premium.</p>
+  <a href="#" class="btn" style="background:white; color:#b76e79;">Rezerwuj wizytę</a>
 </section>
 
 </body>
