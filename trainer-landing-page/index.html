@@ -11,6 +11,7 @@
 <meta name="author" content="NaxaBe Digital">
 
 <link rel="stylesheet" href="./style.css">
+<link rel="icon" href="favicon.ico">
 
 </head>
 
@@ -38,11 +39,10 @@
         <h1>Trener Personalny Warszawa</h1>
         <p>Transformacje sylwetki • Redukcja tkanki tłuszczowej • Budowa masy mięśniowej</p>
         <a href="#kontakt" class="btn">Umów bezpłatną konsultację</a>
-</div>
     </div>
 </header>
 
-<section id="o-mnie" class="about">
+<section id="o-mnie" class="about reveal">
     <h2>Dlaczego warto ze mną trenować?</h2>
     <p>Pomagam kobietom i mężczyznom osiągnąć realne efekty bez głodówek i przypadkowych planów z internetu.</p>
 </section>
@@ -190,7 +190,7 @@
         </div>
     </div>
 
-    <a href="#hero" class="contact-btn">Umów bezpłatną konsultację</a>
+   <a href="#start" class="contact-btn">Umów bezpłatną konsultację</a>
     
 <div class="social-icons">
     <a href="#" target="_blank" aria-label="WhatsApp">
@@ -248,24 +248,24 @@ window.addEventListener("load", revealOnScroll);
 </script>
 
 <script>
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.clientHeight;
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
 
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute("id");
         }
     });
 
     navLinks.forEach(link => {
         link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
+        if (current && link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
     });
