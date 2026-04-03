@@ -78,7 +78,7 @@ h2::after {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: transparent;
+  background: #000;
   position: relative;
   overflow: hidden;
 }
@@ -486,6 +486,7 @@ footer {
   background: transparent;
   transition: all 0.35s ease;
   z-index: 1000;
+  mix-blend-mode: lighten;
 }
 
   .navbar.scrolled {
@@ -634,6 +635,52 @@ footer {
     transform: translateY(0);
   }
 }
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.1;
+
+  background: linear-gradient(90deg, #c9a227, #f5d76e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 40px rgba(201,162,39,0.15);
+
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+/* HOVER = outline efekt */
+.hero-title:hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #c9a227;
+}
+
+  .blob {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #c9a227, transparent 70%);
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(60px);
+  animation: floatBlob 8s ease-in-out infinite;
+}
+
+.blob2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #c9a227, transparent 70%);
+  top: 80px;
+  left: 120px;
+  animation-delay: 3s;
+}
+
+@keyframes floatBlob {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-40px) translateX(30px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
   
 </style>
 </head>
@@ -664,11 +711,14 @@ footer {
 <div class="hero-inner">
 
   <div class="hero-left">
-    <h1 class="fade-up">NaxaBe Digital</h1>
+  <h1 class="hero-title fade-up">
+    Twoja strona.<br>
+    Twoja przyszłość.
+  </h1>
 
     <p class="fade-up delay-1">
-      Tworzymy strony internetowe i rozwiązania,
-      które zwiększają sprzedaż i widoczność firm online
+      Strony, które sprzedają.<br>
+      Design, który buduje zaufanie.
     </p>
 
     <div class="hero-divider"></div>
@@ -682,8 +732,9 @@ footer {
 
   <div class="hero-right">
     <div class="hero-visual">
-      <div class="tech-lines"></div>
-    </div>
+      <div class="blob"></div>
+      <div class="blob blob2"></div>
+</div>
   </div>
 
 </div>
