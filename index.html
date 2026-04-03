@@ -68,8 +68,11 @@ h2::after {
 
 .hero {
   text-align: center;
-  padding: 120px 20px;
-  background: radial-gradient(circle at center, rgba(201,162,39,0.08), #000 60%);
+  padding: 140px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1974&auto=format&fit=crop")
+    center/cover no-repeat;
 }
 
 .hero h1 {
@@ -474,8 +477,6 @@ footer {
 </head>
 
 
-/* ===== BODY ===== */
-
 <body>
 
   <nav class="navbar">
@@ -510,53 +511,6 @@ footer {
   </div>
 </section>
 
-<section>
-  <h2>O mnie</h2>
-  <div class="about-wrapper">
-
-    <div>
-      <p>
-        Projektuję nowoczesne strony internetowe i landing page dla małych oraz średnich firm,  
-        a także dla marek osobistych i klientów indywidualnych, którzy chcą budować silną obecność online i realnie zwiększać sprzedaż.
-      </p>
-
-      <p>
-        Łączę web development z AI, SEO oraz automatyzacją,
-        tworząc rozwiązania estetyczne, strategiczne i skalowalne.
-      </p>
-
-      <p>
-        Każdy projekt powstaje w oparciu o analizę biznesową – z myślą o konwersji,
-        widoczności w wyszukiwarkach oraz długofalowym rozwoju marki.
-      </p>
-
-      <p>
-        Wykorzystuję AI w optymalizacji treści oraz tworzeniu koncepcji wizualnych,
-        łącząc kreatywność z technologią.
-      </p>
-
-      <p>
-        <strong>NaxaBe Digital</strong> to połączenie technologii, estetyki
-        i świadomej strategii online.
-      </p>
-      <p>
-        Współpracuję z firmami, które traktują swoją obecność online jako realne narzędzie wzrostu, a nie tylko wizytówkę.
-      </p>
- 
-    </div>
-    <div>
-      <p style="font-size: 22px; line-height: 1.8; color: #c9a227;">
-        Tworzymy rozwiązania cyfrowe, które realnie wpływają na rozwój biznesu.
-      </p>
-
-      <p style="margin-top: 15px; color: #aaa;">
-        Web development • SEO • AI • Automatyzacja
-      </p>
-  </div>
-    
-  </div>
-</section>
-
 <section id="about">
   <h2>Dlaczego NaxaBe?</h2>
   <div class="projects">
@@ -581,6 +535,11 @@ footer {
       <p>Strony przygotowane pod rozwój firmy, kampanie reklamowe, <span class="highlight">SEO</span> oraz dalszą rozbudowę funkcjonalności.</p>
     </div>
   </div>
+
+  <div style="margin-top:40px;">
+  <a href="#kontakt" class="btn">Dowiedz się więcej</a>
+</div>
+  
 </section>
 
 <section id="services">
@@ -652,11 +611,21 @@ footer {
   </div>
 </section>
 
-  
-  <section id="pricing">
-  <h2>Cennik</h2>
-</section>
+  <section style="text-align:center; padding:100px 20px; background: linear-gradient(145deg, #0a0a0a, #000);">
 
+  <h2 style="font-size:48px;">
+    Bezpłatna wycena projektu
+  </h2>
+
+  <p style="margin-top:20px; font-size:20px; color:#aaa;">
+    Opisz swój projekt – przygotujemy wstępną koncepcję i wycenę
+  </p>
+
+  <a href="#kontakt" class="btn" style="margin-top:30px;">
+    Zapytaj o wycenę
+  </a>
+
+</section>
   
 <section id="kontakt">
   <h2>Kontakt</h2>
@@ -694,7 +663,27 @@ footer {
 </section>
 
 <footer>
-  © 2026 NaxaBe Digital
+
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+
+    <div>
+      <strong>NaxaBe Digital</strong><br>
+      Web & AI Studio<br>
+      naxabe.digital@gmail.com
+    </div>
+
+    <div>
+      <a href="#" style="color:#aaa; display:block; margin-bottom:6px;">Polityka prywatności</a>
+      <a href="#" style="color:#aaa; display:block; margin-bottom:6px;">Regulamin</a>
+      <a href="#" style="color:#aaa;">Cookies</a>
+    </div>
+
+  </div>
+
+  <div style="margin-top:30px; text-align:center; color:#666;">
+    © 2026 NaxaBe Digital
+  </div>
+
 </footer>
 
   <script>
