@@ -473,6 +473,40 @@ footer {
   color: #c9a227;
 }
 
+  .hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-left {
+  text-align: left;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-visual {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,162,39,0.25), transparent 70%);
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* animacja subtle premium */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
 </style>
 </head>
 
@@ -499,16 +533,30 @@ footer {
 </nav>
 
 <section id="home" class="hero">
-  <h1>NaxaBe Digital</h1>
-  <p>Tworzymy strony internetowe i rozwiązania AI, które zwiększają sprzedaż i widoczność firm online</p>
+<div class="hero-inner">
 
-  <div class="hero-divider"></div>
+  <div class="hero-left">
+    <h1>NaxaBe Digital</h1>
 
-  <a href="#kontakt" class="btn">Rozpocznij współpracę</a>
+    <p>
+      Tworzymy strony internetowe i rozwiązania,
+      które zwiększają sprzedaż i widoczność firm online
+    </p>
 
-  <div class="hero-tagline">
-    Strategia. Technologia. Wzrost.
+    <div class="hero-divider"></div>
+
+    <a href="#kontakt" class="btn">Rozpocznij współpracę</a>
+
+    <div class="hero-tagline">
+      Strategia. Technologia. Wzrost.
+    </div>
   </div>
+
+  <div class="hero-right">
+    <div class="hero-visual"></div>
+  </div>
+
+</div>
 </section>
 
 <section id="about">
