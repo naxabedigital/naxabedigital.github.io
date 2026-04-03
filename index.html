@@ -433,12 +433,71 @@ footer {
   border-color: #c9a227;
 }
 
+  .navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #c9a227;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c9a227;
+}
+
 </style>
 </head>
 
+
+/* ===== BODY ===== */
+
 <body>
 
-<section class="hero">
+  <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="nav-logo">
+      NaxaBe Digital
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Usługi</a>
+      <a href="#projects">Projekty</a>
+      <a href="#pricing">Cennik</a>
+      <a href="#about">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+  </div>
+</nav>
+
+<section id="home" class="hero">
   <h1>NaxaBe Digital</h1>
   <p>Tworzymy strony internetowe i rozwiązania AI, które zwiększają sprzedaż i widoczność firm online</p>
 
@@ -498,7 +557,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section id="about">
   <h2>Dlaczego NaxaBe?</h2>
   <div class="projects">
     <div class="card">
@@ -524,7 +583,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section id="services">
   <h2>Usługi</h2>
   <div class="projects">
     <div class="card">
@@ -550,7 +609,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projekty</h2>
   <div class="projects">
 
@@ -592,6 +651,12 @@ footer {
     
   </div>
 </section>
+
+  
+  <section id="pricing">
+  <h2>Cennik</h2>
+</section>
+
   
 <section id="kontakt">
   <h2>Kontakt</h2>
