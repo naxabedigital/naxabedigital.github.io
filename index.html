@@ -48,9 +48,8 @@ body {
 }
 
 section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
+  padding: 80px 20px;
+  position: relative;
 }
 
 h2 {
@@ -69,9 +68,16 @@ h2::after {
   margin-top: 10px;
 }
 
+  .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .hero {
-  text-align: center;
-  padding: 140px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   background: transparent;
   position: relative;
   overflow: hidden;
@@ -473,15 +479,22 @@ footer {
   border-color: #c9a227;
 }
 
-  .navbar {
-  position: sticky;
+.navbar {
+  position: fixed;
   top: 0;
   width: 100%;
-  background: #000;
-  backdrop-filter: none;
+  background: transparent;
+  transition: all 0.35s ease;
   z-index: 1000;
 }
 
+  .navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+  
 .nav-container {
   max-width: 1200px;
   margin: auto;
@@ -501,9 +514,14 @@ footer {
 }
 
 .nav-logo img {
-  height: 60px; 
+  height: 75px; 
   width: auto;
   display: block;
+  transition: 0.3s;
+}
+
+  .navbar.scrolled .nav-logo img {
+  height: 65px;
 }
 
 .nav-links a {
@@ -525,6 +543,7 @@ footer {
   gap: 40px;
   max-width: 1200px;
   margin: auto;
+  padding-top: 80px;
 }
 
 .hero-left {
@@ -590,6 +609,31 @@ footer {
     transform: rotate(360deg) scale(1.05);
   }
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-up.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   
 </style>
 </head>
@@ -620,18 +664,18 @@ footer {
 <div class="hero-inner">
 
   <div class="hero-left">
-    <h1>NaxaBe Digital</h1>
+    <h1 class="fade-up">NaxaBe Digital</h1>
 
-    <p>
+    <p class="fade-up delay-1">
       Tworzymy strony internetowe i rozwiązania,
       które zwiększają sprzedaż i widoczność firm online
     </p>
 
     <div class="hero-divider"></div>
 
-    <a href="#kontakt" class="btn">Rozpocznij współpracę</a>
+    <a href="#kontakt" class="btn fade-up delay-2">Rozpocznij współpracę</a>
 
-    <div class="hero-tagline">
+    <div class="hero-tagline fade-up delay-3">
       Strategia. Technologia. Wzrost.
     </div>
   </div>
@@ -646,8 +690,11 @@ footer {
 </section>
 
 <section id="about">
-  <h2>Dlaczego NaxaBe?</h2>
-  <div class="projects">
+  <div class="container">
+
+    <h2>Dlaczego NaxaBe?</h2>
+
+    <div class="projects">
     <div class="card">
     <div class="card-icon">🎯</div>
       <h3>Strategia biznesowa</h3>
@@ -673,11 +720,14 @@ footer {
   <div style="margin-top:40px;">
   <a href="#kontakt" class="btn">Dowiedz się więcej</a>
 </div>
-  
+</div>
 </section>
 
 <section id="services">
+  <div class="container">
+    
   <h2>Usługi</h2>
+    
   <div class="projects">
     <div class="card">
     <div class="card-icon">🌐</div>
@@ -700,10 +750,14 @@ footer {
       <p>Wykorzystanie <span class="highlight">AI</span> w tworzeniu treści, analizie danych i automatyzacji procesów marketingowych.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <section id="projects">
+  <div class="container">
+    
   <h2>Projekty</h2>
+    
   <div class="projects">
 
 <a href="https://naxabe.digital/trainer-landing-page/" target="_blank" class="card project-link project-trainer">
@@ -743,10 +797,11 @@ footer {
 </a>
     
   </div>
+  </div>
 </section>
 
   <section style="text-align:center; padding:100px 20px; background: linear-gradient(145deg, #0a0a0a, #000);">
-
+  
   <h2 style="font-size:48px;">
     Bezpłatna wycena projektu
   </h2>
@@ -762,6 +817,8 @@ footer {
 </section>
   
 <section id="kontakt">
+  <div class="container">
+    
   <h2>Kontakt</h2>
 
   <div class="contact-wrapper">
@@ -792,8 +849,8 @@ footer {
   </a>
 
 </div>
-
-  </div>
+</div>
+</div>
 </section>
 
 <footer>
@@ -826,6 +883,16 @@ function copyEmail() {
   navigator.clipboard.writeText(email);
   alert("Email skopiowany!");
 }
+
+    window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
 </script>
   
 </body>
